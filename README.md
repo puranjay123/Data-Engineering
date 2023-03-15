@@ -64,3 +64,36 @@ characterstics of SNow flake
 snowflake uses smaller disk space
 easier to implemet a dimension is added to the schema
 more maintencance efforts are needed 
+
+
+# Normalization in DBMS
+
+Normialization s used to reduce data reduandcey
+
+* Insert anaomiles
+* updateing anaomlies
+* Deletion anomalies
+
+First Normal Form(1NF)
+* Every attribute hold only an atomic(formaing a single unit) value.
+* each records need to be unique record.
+
+Second Normal Form(2NF)
+* In the second normal form, all non-key attributes are fully functional 
+  dependent on the primary key.
+  
+ third Normal Form(3NF)
+ * A relation will be in #NF if it is 2NF and not  contain any transitive partial dependecy.
+ X->Y
+ y-> not X
+ y->Z
+ so X->Z then not 3NF
+ 
+ Non prime atttribute us transitelively dependent on primary key
+ 
+ # BCNF(boyce codd normal form)
+ 
+ A given relation is said to be in its third normal form when it’s in 2NF but has no transitive partial dependency. Meaning, when no transitive dependency exists for the attributes that are non-prime, then the relation can be said to be in 3NF.
+ 
+ 
+
