@@ -75,3 +75,104 @@ stream data means the source will be live it means we are collecting live data a
 Real time dashboard Tableau, intelligent agents recommendations
  
 ![WhatsApp Image 2023-03-15 at 5 46 10 PM](https://user-images.githubusercontent.com/55429956/225306527-36fe30ef-12ac-402a-960c-fa028ecbe96e.jpeg)
+
+
+# hadoop is a framwork that allows distributed processing of large datasets across clusters of coomdity computers using simple programming models.
+## Haddop chatcrerstics
+* Scalable - Can follow both horizontal and vertical scaling
+* Flexible - Can store huge data and decide to use it later
+* Reliable - Stores copies of the data
+* Economical
+
+hadoop Core COmponents:
+1) Hadoop Distributed File System(HDFS) [Storage]
+2) yet anaother resoucre negotiator(YARN)
+3) Map Reduce(programming methodolog)
+
+## Core data processing
+
+ ## SPARK SQL and Data Frames
+ * data frame programming abstraction
+ * complex analytics with SQL
+ 
+ ## SPARK Streaming
+ * process real time data 
+ * analyze streaming and historical data
+ * use similar code for batch data and real time data
+
+## ML Lib
+* provides scalable machine learning
+* Works in memory[100 time sfaster than map reduce]
+
+## graphX
+* graph computation engine bult on top of spark that eneable working with graph structured data at scale.
+* Intoduces a new graph abstraction,the directed multigraph.
+* Useful for visuzliaing graphs for social networks.
+
+## Pyspark is written in Scala
+pyspark in python wrapper around spark core
+## Hadoop
+
+**hadoop is a distributed cluster
+
+* It was the big data platform
+* Compute system and storage system closely integrated
+
+![image](https://user-images.githubusercontent.com/55429956/225487138-b8d6c32f-6b4f-473e-b03c-aead9b06a7e6.png)
+
+## COmponenetts oof Hadoop ecosystem
+### OOZIE - It makes the JobFlow
+OOzie is a workflow or coordination system used to manage the hadoop jobs
+
+## Airlfow : also used for making JObFLOW[but it uses Python]
+
+
+->Name node(master service)
+* name node is a mster service that stores meta data of each data blocks(location,size,no. of replicas,permission
+Replicas = dfs.replica = 3(default)
+replicas will be such way that no two same blocks are placd within same DataNode
+HDFS manages DATA blocks in such a way that it is always highly Available.
+``if we wll not have name nodes 
+we will dont have condition name nodes run out of storage,avaialibilty``
+Clutser --> Collection of racks
+
+# HDFS Version 2:
+![Frame 1 (1)](https://user-images.githubusercontent.com/55429956/225543695-20cb0f68-de8e-4e17-97c9-af6152cdeab0.png)
+
+## Edit Logs:
+Change in FSImage from last snapshot
+## FS Image:
+FSImage is point in time snapshot of hhdfs cluster
+## Namespaces : One of the content stored in FSImage,HDFS path to datablocks
+
+
+
+
+* When active namme node is DOwn standby Name Node will automatically be new active namenode
+
+#### Zookeeper:
+It is a coordinator whcih check health status of active name node 
+
+* if the zookeper found the particular node is going down it will allocate a different resource as actie node on the basis of resources
+
+
+
+![Frame 1 (2)](https://user-images.githubusercontent.com/55429956/225545338-2e614ee9-d4bb-4cd6-9d41-b4001e7c3f75.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
