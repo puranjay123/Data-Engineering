@@ -95,5 +95,34 @@ Second Normal Form(2NF)
  
  A given relation is said to be in its third normal form when it’s in 2NF but has no transitive partial dependency. Meaning, when no transitive dependency exists for the attributes that are non-prime, then the relation can be said to be in 3NF.
  
+ # day 3[16th March]
+ I have started course in linkedin learning APache spark by example
  
+ ## SPARK SQL and Data Frames
+ * data frame programming abstraction
+ * complex analytics with SQL
+ 
+ ## SPARK Streaming
+ * process real time data 
+ * analyze streaming and historical data
+ * use similar code for batch data and real time data
 
+## ML Lib
+* provides scalable machine learning
+* Works in memory[100 time sfaster than map reduce]
+
+## graphX
+* graph computation engine bult on top of spark that eneable working with graph structured data at scale.
+* Intoduces a new graph abstraction,the directed multigraph.
+* Useful for visuzliaing graphs for social networks.
+
+## Pyspark is written in Scala
+pyspark in python wrapper around spark core
+## Hadoop
+
+**hadoop is a distributed cluster
+
+* It was the big data platform
+* Compute system and storage system closely integrated
+
+![image](https://user-images.githubusercontent.com/55429956/225487138-b8d6c32f-6b4f-473e-b03c-aead9b06a7e6.png)
