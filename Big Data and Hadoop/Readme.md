@@ -220,9 +220,33 @@ The second block will be 2 MB in size
 
 
 
+# LINUX
+* `cat filename.txt` - To display the contents of the file <br>
+* `ls -R` - To dipslay the paths of the dircetrory <br>
+* `cp ./test/filename.txt ./test/testdir1/testdir2/testdir3/` -  To copy the current file and paste it i the different directory `cp` command is used. <br>
+* chmod permission filename/foldername
+*       READ    -->  4
+*       Write   -->  2
+*       Execute -->  1
+          chmod 7 4 1
+              [user,group,others]
 
+* `grep` command is used to search for a pattern in a the filenames grep `i` is used to remove case sentive files.
 
+# Hadoop Commands linux
+`put` command is used to copy the file into different directory
 
+cat be replace the content
+append command will add content within a file
+r  - replication center it shows how many repliucass of existing file we have 
+%Y - overall size
+%o - block size
+%y - date
+%u - 
+`hdfs dfs -stat %r /hdfs/dumyfile.txt`
+hadoop fs -count -v /
+fsck = file system check
+ hadoop balancer - It is used to balance out everything in a cluster
 
 
 
