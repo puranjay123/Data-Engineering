@@ -143,7 +143,7 @@ Clutser --> Collection of racks
 Change in FSImage from last snapshot
 ## FS Image:
 FSImage is point in time snapshot of hhdfs cluster
-## Namespaces : One of the content stored in FSImage,HDFS path to datablocks
+## Namespaces : One of the content stored in FSImage,HDFS path to datablocks/directroy
 
 
 
@@ -158,6 +158,63 @@ It is a coordinator whcih check health status of active name node
 
 
 ![Frame 1 (2)](https://user-images.githubusercontent.com/55429956/225545338-2e614ee9-d4bb-4cd6-9d41-b4001e7c3f75.png)
+
+## HDFS SNAPSHOT
+* hadoop 2 adds support for file system snapshots. A snapshot is a point-in-tim image of the entire file system or a sub tree of a file system.
+* Portection against user errors: An admin can set up a process to take snapshots peridocally. if a user accidently delete files, these can be restrored from the snapshot that contains file.
+* 
+
+## ** Question 1: Is hadoop good for processing small no. of large block size or large number of small block size?**
+* HDFS uses large block size to store data,which generates less no. of namespaces resulting into burdon on Name Node.
+* Large no. of small size blocks --> More metadata --> More resources required by name node
+
+## ** Question 2: Can multiple clients request to perform. Write to HDFS at same time?**
+* HDFC follows write once read many
+
+## ** QUestoon 3: Namenode safemode **
+* HDFS goes into read only mode. No clinet will be allowed to perform write or update.
+* command :`HDFS dfs admin -safemode leave`.
+
+## ** What is heartbeat in HDFS?
+It is a signal which sent from datanode to namenode periodically to Namenode
+
+## WHat is fsck in hadoop?
+In Hadoop, fsck (file system check) is a command-line tool used to check the health and status of the Hadoop Distributed File System (HDFS). The fsck command inspects the HDFS filesystem metadata and checks for any inconsistencies or errors in the file system.
+
+The fsck tool analyzes the following aspects of the HDFS:
+
+Blocks: The tool checks the block reports from the DataNodes and verifies that the blocks are available and correctly replicated across the DataNodes.
+
+Files: The tool checks the HDFS namespace for any missing, corrupted, or under-replicated files.
+
+Snapshots: The tool checks the snapshots taken on the HDFS to ensure they are consistent and free from any errors.
+
+Quotas: The tool checks the quota limits set on the HDFS directories to ensure they are not exceeded.
+
+The fsck tool provides a report on the state of the HDFS, including the number of missing blocks, under-replicated blocks, and corrupted blocks. This information can be used to take corrective measures to fix any issues identified in the HDFS.
+
+## what happends when a data nodes goes down to replicas of data blocks?
+* WHen data nodes goes down new replicas of blocks present in data node wil be created,
+* when the data node which was down is up again the newly create datablocks will automatically deleted.
+* 
+## How many blocks will be create for a file sze of 130 mb. What will be sizes of Datablocks?
+
+The first block will be 128 MB in size
+The second block will be 2 MB in size
+
+## Hadoop types of Nodes
+* Name node
+* secondry name node
+* data node 
+* recource manager
+* Node manager
+
+# YARN[Yet anaother Resource Negotiator]
+
+
+1) Job scheduler: It works as pure scheduler . It does not play any role in executing Job.
+                * Allocate the resources to each Job.
+                * Schedulers scheduler Job by following (Capacity,Fair,FIFO) (FAIR - it will average out the resources to all submit JOB)
 
 
 
