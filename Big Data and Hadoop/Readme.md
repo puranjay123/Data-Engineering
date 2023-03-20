@@ -250,13 +250,26 @@ r  - replication center it shows how many repliucass of existing file we have
 hadoop fs -count -v /
 fsck = file system check
  hadoop balancer - It is used to balance out everything in a cluster
+ 
+ 
+ 
+ ## 20th March
+ # MAP reduce
+ when aggregate function is there there is reduce mapping required
+ 
+ 
+## Maper Job +Recuder Job
+
+![WhatsApp Image 2023-03-20 at 12 19 43 PM](https://user-images.githubusercontent.com/55429956/226267785-07fc15d7-439e-4123-914c-a6c519512f69.jpeg)
 
 
 
+![WhatsApp Image 2023-03-20 at 12 19 44 PM](https://user-images.githubusercontent.com/55429956/226267789-40284e53-dd17-4901-bb61-f755245a4904.jpeg)
 
 
 
+![WhatsApp Image 2023-03-20 at 12 19 44 PM (1)](https://user-images.githubusercontent.com/55429956/226267794-894e5521-012d-440a-ae48-0da98806a33b.jpeg) <br>
+Mapreduce process closer look
 
 
-
-
+![WhatsApp Image 2023-03-20 at 12 27 23 PM](https://user-images.githubusercontent.com/55429956/226269558-f8546bcc-50d8-45fe-b16f-6e46532e3b4c.jpeg)
