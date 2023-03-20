@@ -1,4 +1,7 @@
+running  the services
 
+`start-dfs.sh`
+`start-yarn.sh`
 # Big Data
 Big data is the data that has high volume, variety, velocity, veracity and value.
 
