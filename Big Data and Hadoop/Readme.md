@@ -273,3 +273,52 @@ Mapreduce process closer look
 
 
 ![WhatsApp Image 2023-03-20 at 12 27 23 PM](https://user-images.githubusercontent.com/55429956/226269558-f8546bcc-50d8-45fe-b16f-6e46532e3b4c.jpeg)
+# SQOOP Commands:
+----------------------
+command:mysql -u root -p <press enter>
+ 
+ ## 2. Display all DB:
+ -------- 
+ `show databases;`
+ 
+ ## 3. Select DB to create Table:
+ `use dbname;`
+ 
+ ## 4. create a new table:
+ `create table table_name(schemas of table with datatype,PRIMARY KEY);`
+ create table if not exists emptable(empid int, empname varchar(50),salary int,department varchar(60),designation varchar(60));
+ 
+ ## 5. Insert values into table
+ ------------
+ syntax:
+ INSERT INTO
+
+ 
+ ## steps in sqoop EXPORT
+ ### 3)Create a new dir i HDFS and copy file to HDFS
+ -------------------------------
+ hdfs dfs -mkdir /Employee
+ hdfs dfs -put /hpme/hadoop/Downloads/Employee.csv /Employee
+ ### 4)Switch to new terminal:
+ sqoop export -connect jdbc:mysql://localhost/databasename --username root --password hadoop@123 -- export-dir /employee.employee.csv --table employee --input-fields-terminated-by ',' --input-lines-terminated-by '\n' --m 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
