@@ -306,8 +306,41 @@ command:mysql -u root -p <press enter>
 
 
 
+# 21 march
+ ##SQOOP EVAL:
+ Running EVAL will return query o/p from database table
+ ### Eval: In eval you dont have to mention anythirng related to sqoop eval and we don't have to mention condition [it is only mentoned if we use import}
+ 
+ `sqoop eval --connect jdbc:mysql://localhost/amitdb --username root --password hadoop@123 --query "SELECT * from emptable where salary>150000" `
+ 
+ 
+ 
+ # Hive
+ ##kill hive
+ ``kill 6414``
+ Activate the hive through terminal by typing 
+ `hive`
+ 
+ ### create a database in Hive
+ `create database if not exists hivedb;`
+ 
+ `use hivedb;`
+  ## There are 3 Types of tables in HIVE
+   * Managed Table
+   * External Table
+   * Temp Table
+ `create table if not exists employee(empid int,firstname varchar(60),lastname varchar(60),age int,gender varchar(30),department varchar(60),country varchar(60)`
 
-
+ 
+ 
+ 
+ 
+ 
+# Load Data  
+ `load data local inpath 'home/hadoop/Downloads/EMployee.csv`
+ `overwrite into table employee;`
+ 
+ 
 
 
 
