@@ -380,6 +380,7 @@ command:mysql -u root -p <press enter>
  Meta store is the comapnenest tahts troe sthe sustem caalog and metadata and about table,columsn,partitions and so on.
 
 
-
+# Commands
+ 
 
 
