@@ -341,15 +341,43 @@ command:mysql -u root -p <press enter>
  `overwrite into table employee;`
  
  
+ # Hive 
+ Hive is a designed to enable easy data summarization,ad-hoc querying and analysis of large volumes of data. It provides SQL like whcih enables users to do ad-hoc querying,summarization and data analysis easily.
+ 
+ ## Hive can also store the data inteself.
+ * Data will be stored in a file to which we can run the query
+ * hive storage is HDFS
+ * it is used for performing distributed processing and data anlyiss.
+ Apache hive features to provide Hive Query language(HQL)
+ 
+ 
+## Defination hive
+ * Hive tool is used for running ad-hoc queries(similar to SQL)
+ * Hive uses default location to store files "/user/hive/warehouse"
+       *[ This is the locatio where all DB,tables are stored]
+       * This location can be accessed by other Data processing tools
+ 
+ 
+![Frame 2 (1)](https://user-images.githubusercontent.com/55429956/227127975-f02ae372-d15f-4f92-a196-aeff1a694986.png)
+
+ -> Hive queries will run as mapreduce Job(Mapper +Reducer+sort+reducer)
+ 
+ Hive server2 architureture
 
 
 
 
 
+![Frame 3](https://user-images.githubusercontent.com/55429956/227135063-3b4d6ef5-2977-48dc-8b30-4edc0ccd3905.png)
 
 
+![WhatsApp Image 2023-03-23 at 1 08 52 PM](https://user-images.githubusercontent.com/55429956/227135325-e8f77fc3-bad2-4471-a6a9-625f1bb4662b.jpeg)
 
-
+![WhatsApp Image 2023-03-23 at 1 08 54 PM](https://user-images.githubusercontent.com/55429956/227135328-2f9e2f92-d7b8-48ff-a8ba-33aa25947e6b.jpeg)
+ 
+ metastore can have multiple components if we want to make new hive companent we have to delete the meta store and make a new matea store companent.
+ 
+ Meta store is the comapnenest tahts troe sthe sustem caalog and metadata and about table,columsn,partitions and so on.
 
 
 
