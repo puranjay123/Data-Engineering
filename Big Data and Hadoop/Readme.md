@@ -381,6 +381,168 @@ command:mysql -u root -p <press enter>
 
 
 # Commands
+  
+{HADOOP HDFS ASSIGNMENT}
+[BIG DATA ,LINUX COMMANDS]
+ 
+ 
+Big Data (HDFS) Assignment
+Problem Statement: Using Command line of HDFS, perform following tasks.
+## a)	Create a directory /hadoop/hdfs/ in HDFS
+`hdfs dfs -mkdir /user/Hadoop/hdfs/Puranjay_dir
+hdfs dfs -ls /user/Hadoop/hdfs/`
+ 
+ ![1](https://user-images.githubusercontent.com/55429956/227432286-f698fc1d-1a0a-48fc-8134-26e9639b685d.png)
+
+b)	Create a temp directory in Hadoop. Run HDFS command to delete “temp” directory.
+
+`Hdfs dfs -rm -r /user/Hadoop/temp
+Hdfs dfs -ls /user/hadoop`
+![2(delete)](https://user-images.githubusercontent.com/55429956/227432307-c88dc93f-9b92-4c3e-9563-73d6def7ad01.png)
+
+ 
+c)	List all the files/directories for the given hdfs destination path.
+`Hdfs dfs -ls /user/Hadoop/hdfs`
+ ![3(list Directories)](https://user-images.githubusercontent.com/55429956/227432321-60155b44-e833-4846-9ec0-cc07aec9d326.png)
+
+d)	Command that will list the directories in /hadoop folder.
+ ![4](https://user-images.githubusercontent.com/55429956/227432654-0f35cce9-a839-4c73-a0d3-391647985811.png)
+
+`Hdfs dfs -ls /user/hadoop`
+ 
+e)	Command to list recursively all files in hadoop directory and all subdirectories in hadoop directory
+ ![5](https://user-images.githubusercontent.com/55429956/227432680-bb5c94cd-b0d3-404c-9228-2423cfb6962d.png)
+
+`Hdfs dfs -ls -R /user/hadoop`
+ 
+f)	List all the files inside /hadoop/hdfs/ directory which starts with 'dir'.
+ ![6 1](https://user-images.githubusercontent.com/55429956/227432689-b40e0128-3503-4e81-86f5-894760cbbdc7.png)
+
+`Hdfs dfs -ls /hadoop |grep dir` 
+  
+g)	Create a temp.txt file. Copies this file from local file system to HDFS
+ ![7](https://user-images.githubusercontent.com/55429956/227432709-add85c3d-6ca2-469c-a26e-882d396973a1.png)
+
+ 
+`Hdfs dfs -copyFromLocal temp.txt .hadoop.dir
+Nano /hdfs/dir
+Nano /hdfs/dir/temp.txt
+Hdfs dfs -ls /Hadoop/dir
+Hdfs dfs -cat /Hadoop/dir/temp.txt`
+ 
+h)	Copies the file from HDFS to local file system.
+ ![8](https://user-images.githubusercontent.com/55429956/227432722-0b930dd4-4d37-47f0-9d88-181d496d5eba.png)
+
+`Hdfs dfs -copyToLocal /Hadoop/temp1.txt /`
+ 
+i)	Command to copy from local directory with the source being restricted to a local file reference.
+ ![9](https://user-images.githubusercontent.com/55429956/227432730-6275bbe4-ed87-4ab6-a1a4-6757ec7625d0.png)
+
+`Hdfs dfs -put temp.txt /hadoop`
+ 
+j)	Command to copies to local directory with the source being restricted to a local file reference.
+ ![10](https://user-images.githubusercontent.com/55429956/227432747-211dc9d2-33ef-4f68-b694-f680f793c179.png)
+
+`Hdfs dfs -get /Hadoop/tempo.txt`
+ 
+k)	Command to move from local directory source to Hadoop directory.
+ ![11](https://user-images.githubusercontent.com/55429956/227432761-0dac22b5-6fc1-44d0-be68-61f31dd049a0.png)
+
+`Hdfs dfs -put -f temp1.txt /hadoop`
+ 
+l)	Deletes the directory and any content under it recursively.
+ ![12](https://user-images.githubusercontent.com/55429956/227432795-79eec165-9a7b-4498-8f53-c31143a1d841.png)
+
+`Hdfs dfs -rm -r /Hadoop/dir`
+ 
+m)	List the files and show Format file sizes in a human-readable fashion.
+ ![13](https://user-images.githubusercontent.com/55429956/227432812-657b08cb-e196-42ca-95f7-c29e4e8a7997.png)
+
+`Hdfs dfs -ls -h /hadoop`
+ 
+n)	Take a source file and outputs the file in text format on the terminal.
+ ![14](https://user-images.githubusercontent.com/55429956/227432840-d99d518c-fbdd-4d3b-af25-9b51a9e71f58.png)
+
+`Hdfs dfs -text /Hadoop/temp.txt
+Hdfs dfs -cat /Hadoop/tempo.txt`
+ 
+o)	Display the content of the HDFS file test on your /user/hadoop2 directory.
+ ![15](https://user-images.githubusercontent.com/55429956/227433114-e7ad389b-6a39-425a-8d41-d5c4dfdc26cf.png)
+
+`Hdfs dfs -put /home/Hadoop/tempo.txt /user/Hadoop/test
+Hdfs dfs -cat /user/Hadoop/test/tempo.txt`
+ 
+p)	Append the content of a local file test1 to a hdfs file test2.
+ ![16 1](https://user-images.githubusercontent.com/55429956/227433137-95e33d4a-5ac7-4cab-9329-ec79bb296f9d.png)
+![16 2](https://user-images.githubusercontent.com/55429956/227433142-effd8b00-3e50-4bcf-ae8c-06a8d8e0a96e.png)
+
+`Hdfs dfs -appendToFile /home/Hadoop/temp.txt /user/Hadoop/test/tempo.txt`
+ 
+
+ 
+q)	Show the capacity, free and used space of the filesystem
+![17](https://user-images.githubusercontent.com/55429956/227433157-2b1fe9c6-56ea-4728-89e0-18c0458da25c.png)
+
+`Hdfs dfs -df /`
+ 
+r)	Shows the capacity, free and used space of the filesystem.  Add parameter Formats the sizes of files in a human-readable fashion.
+ ![18](https://user-images.githubusercontent.com/55429956/227433177-fb4a6eec-1ed0-49cb-8eb7-297a9de266a3.png)
+
+`hdfs -df -h /`
+ 
+s)	Show the amount of space, in bytes, used by the files that match the specified file pattern.
+ ![19](https://user-images.githubusercontent.com/55429956/227433192-dd6c5118-ea6a-44bc-bff6-fc57644c42c0.png)
+
+`Hdfs dfs -du /user/Hadoop/h*`
+ 
+t)	Show the amount of space, in bytes, used by the files that match the specified file pattern. Formats the sizes of files in a human-readable fashion.
+![20](https://user-images.githubusercontent.com/55429956/227433211-79374c04-472f-48f4-8bdb-e291f99596ea.png)
+
+`Hdfs dfs -du -h /user/*`
+ 
+u)	Check the health of the Hadoop file system.
+ ![21](https://user-images.githubusercontent.com/55429956/227433228-bad1e199-6cbc-41c6-920b-138f18a72f0e.png)
+
+`Hdfs fsck`
+ 
+v)	Command to turn off the safemode of Name Node.
+ ![22](https://user-images.githubusercontent.com/55429956/227433234-3965b028-1b3b-4c95-874b-920d7b86a5eb.png)
+
+`Hdfs dfsadmin -safemode leave`
+ 
+w)	HDFS command to format NameNode.
+ ![23](https://user-images.githubusercontent.com/55429956/227433248-841e4363-df96-4365-9933-1c149553a184.png)
+
+`hdfs namenode -format`
+ 
+x)	Create a file named hdfstest.txt and change it number of replications to 3.
+ ![24](https://user-images.githubusercontent.com/55429956/227432609-f0aed146-88ef-44d3-bf23-ad90313d68c5.png)
+
+`Hdfs dfs -touchz /user/Hadoop/hdfstest.txt
+Hdfs dfs -setrep -R 3 /user/Hadoop/hdfstest.txt`
+ 
+y)	Write command to display number of replicas for hdfstest.txt file.
+ ![26](https://user-images.githubusercontent.com/55429956/227432588-454bca8c-f006-49e7-b12a-4b90db3520d2.png)
+
+`Hdfs fsck /user/Hadoop/pk.txt -files -blocks -racks`
+ 
+z)	Write command to Display the status of file “hdfstest.txt” like block size, filesize in bytes.
+ ![25](https://user-images.githubusercontent.com/55429956/227432573-24e577d4-f822-4fe3-adbc-5262633f673a.png)
+
+`hdfs dfs -stat “%o %s” /user/Hadoop/hdfstest.txt`
+
+ 
+aa)	Write HDFS command to change file permission from 
+ rw – r – r to rwx-rw-x for hdfstest.txt.
+
+![27](https://user-images.githubusercontent.com/55429956/227432548-5c06b78c-a5be-4b40-820e-d4b859bcc95d.png)
+
+
+`Hdfs dfs -chmod 775 /user/Hadoop/hdfstest.txt
+Hdfs dfs -ls /user/hadoop`
+ 
+
+
  
 
 
