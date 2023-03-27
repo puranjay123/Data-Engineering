@@ -541,6 +541,14 @@ aa)	Write HDFS command to change file permission from
 `Hdfs dfs -chmod 775 /user/Hadoop/hdfstest.txt
 Hdfs dfs -ls /user/hadoop`
  
+#avro FIle format
+ * AVRO format is ROW based storage format for hadoop .Data will be inserted rowwise
+ * AVRO file format store the schema of the table in JSON format,makeing it easy to read and interpret
+ * Data is tored in binary format making size compact and efficient.
+ 
+ ## Colums wise
+ Parquet file format is more effiecent is in terms of storage and performance.
+ 
 
 
  
