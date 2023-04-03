@@ -1,0 +1,90 @@
+1. MySQL
+--------
+Command :mysql -u root -p <press enter>
+hadoop@123
+
+Create New DB:
+--------------
+CREATE DATABASE database;
+
+2. 
+Display all DB:
+--------------
+show databases;
+
+3. 
+Select DB to create Table:
+--------------------------
+use dbname;
+
+4. Create a new table:
+----------------------
+create table table_name(schemas of table with datatype, PRIMARY KEY);
+
+create table if not exists emptable(empid int, empname varchar(50), salary int, department varchar(60), designation varchar(60));
+
+5. Insert values into table
+---------------------------
+syntax :
+INSERT INTO tablename VALUES(values seperated by ',');
+
+6. SQOOP IMPORT
+---------------
+sqoop import --connect jdbc:mysql:localhost/databasename --username root --password hadoop@123 --table emptable -m 1 --target-dir '/output/'
+
+SQOOP EXPORT
+------------
+Steps in Sqoop Export:
+---------------------
+1. Log in mysql
+Command :mysql -u root -p <press enter>
+hadoop@123
+
+2. Change database name
+use amitdb;
+
+3. create new table in mysql:
+create table if not exists emptable(empid int, empname varchar(50), salary int, department varchar(60), designation varchar(60));
+
+3. Create a new dir in HDFS and copy file to HDFS
+---------------------------------------------
+hdfs dfs -mkdir /Employee
+hdfs dfs -put /home/hadoop/Downloads/Employee.csv /Employee
+
+4. Switch to new terminal:
+--------------------------
+sqoop export --connect jdbc:mysql://localhost/databasename --username root --password hadoop@123 --export-dir /employee/employee.csv --table employee --input-fields-terminated-by ',' --input-lines-terminated-by '/n' --m 1
+
+SQOOP QUERY
+-----------
+sqoop import --connect jdbc:mysql:localhost/databasename --username root --password hadoop@123 --query "select * from emptable where country = 'Japan' AND \$CONDITIONS" -m 1 --target-dir '/output/'
+
+Sqoop List-Job
+--------------
+sqoop job --list
+
+Show job:
+---------
+sqoop job --show jobname
+
+Execute job:
+------------
+sqoop job --exec mynewjob
+
+Delete job:
+-----------
+sqoop job --delete jobname
+
+Import JOB
+----------
+sqoop job --create mynewjob -- import --connect jdbc:mysql://localhost/databasename --username root --password hadoop@123 --table hrtable --m 1 --target-dir="/output/"
+
+import-all-tables: Migrating multiple tables from databases all at once.
+-----------------
+sqoop import-all-tables --connect jdbc:mysql://localhost/database --username root --password hadoop@123 -m 1 --target-dir './employee'
+
+SQOOP EVAL:
+----------
+Running Eval will return query o/p from database table
+
+sqoop eval --connect jdbc:mysql://localhost/database --username root --password hadoop@123 --query "SELECT * FROM emptable WHERE Salary > 5000 LIMIT 2"
