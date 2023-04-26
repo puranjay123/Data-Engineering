@@ -27,5 +27,6 @@ using
 * However two different coroprate network can have resources with same Internal IP address.
 * 
 * ALL VM Instances are assigned to aleast one Internal IP address
+* Cre
 
 
