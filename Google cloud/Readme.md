@@ -1,3 +1,13 @@
+`sudo su` - to change to the root user in the SSH terminal
+`service apache2 service`  - STart the apache service
+
+**Internal and External IP addresses** 
+* External IP addresses are internal addressable
+* Internal IP addresses are intenral to a coprotrate network
+* You cannot have two resocurces with same public IP address.
+* However two different coroprate network can have resources with same Internal IP address.
+* 
+* ALL VM Instances are assigned to aleast one Internal IP address
 CLass Notes
 * Bucket is a storag epointer within which you upload the data
 * Server is located somehwere so we need to select the region
@@ -17,16 +27,59 @@ using
 
 ![image](https://user-images.githubusercontent.com/55429956/234267208-15d1efb7-4b3b-4882-ad10-5eee2247905c.png)
 
-`sudo su` - to change to the root user in the SSH terminal
-`service apache2 service`  - STart the apache service
+## snapshot -disk backup with [operating system information]
+## backup of VM[it has saved state of all the congiguration with aditiontinal metadata]-IMage
 
-**Internal and External IP addresses** 
-* External IP addresses are internal addressable
-* Internal IP addresses are intenral to a coprotrate network
-* You cannot have two resocurces with same public IP address.
-* However two different coroprate network can have resources with same Internal IP address.
-* 
-* ALL VM Instances are assigned to aleast one Internal IP address
+if i take backup of of operating system then its snapshot
+EC2 backup -Image
+### Backup of disk -> Snapshot
+###BACKup  oof VM->Image
+
+IP address is when you havingg an addressing system
+
+#VPC
+it should be isolated  and containes subnet in it
+
+
+### * subnet is the smaler entity with a network 
+
+## Protocol
+Web ->http ->80
+Secure web ->https -> 443
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Cre
 
 
